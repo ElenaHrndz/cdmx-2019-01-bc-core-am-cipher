@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Coiny|Lato" rel="stylesheet">
 </head>
 
 <body>
@@ -13,20 +14,33 @@
   </div>
   <p>En esta pagina podras encriptar y desencriptar mensajes que podras enviar a tus contactos</p>
   <h2>Selecciona tu cifrado</h2>
-  <input type="number" name="cifrado" value="number">
-  <table cellspacing=40>
+  <input type="number" id="numberCode" name="cifrado" value="number">
+  <table>
     <thead>
       <tr>
-        <td>Mensaje</td>
-        <td> </td>
-        <td>Código</td>
+        <td id="texto">Mensaje</td>
+        <td><button id="cambiar" onclick="cambiarTextos()">¡Cambiar!</button></button></td>
+        <td id="texto">Código</td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id=yourMessage><textarea name="yourMessage" rows="10" cols="30"></textarea></td>
-        <td> <input type="submit" name="Cifrar"> </td>
-        <td id=yourCode><textarea name="yourCode" rows="10" cols="30"></textarea></td>
+        <td><textarea id="yourInput" name="yourInput" rows="10" cols="30"></textarea></td>
+        <td>
+          <div class="">
+            <table>
+              <tbody>
+                <tr>
+                  <td><input type="submit" name="Cifrar" value="coder"></td>
+                </tr>
+                <tr>
+                  <td><input type="submit" name="Cifrar" value="decoder"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+        <td><textarea id="yourResult" name="yourResult" rows="10" cols="30"></textarea></td>
       </tr>
     </tbody>
   </table>

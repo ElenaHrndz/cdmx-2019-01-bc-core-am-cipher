@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  font-family: Trebuchet MS;
+  font-family: 'Coiny', cursive;
   font-size: 120;
   color: #1affff;
 }
@@ -11,4 +11,11 @@ p{
 
 body {
   background-color: #78E8A1;
+}
+table {
+  border-spacing: 40px;
+}
+
+tr {
+  text-align: center;
 }
