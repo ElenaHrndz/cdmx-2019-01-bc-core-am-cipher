@@ -1,18 +1,20 @@
 h1 {
   text-align: center;
-  font-family: 'Coiny', cursive;
-  font-size: 120;
-  color: #1affff;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 300;
+  color: #9599FF;
 }
 
-p{
-
+p {
+  font-family: 'Special Elite', cursive;
 }
 
 body {
-  background-color: #78E8A1;
+  background-color: #87F0FF;
 }
+
 table {
+  color: #E2FFE8;
   border-spacing: 40px;
 }
 
