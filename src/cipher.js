@@ -2,11 +2,11 @@
 let maxLetterNumber = 26;
 
 window.cipher = {
-//funcion para codificar (da el movimineto de las letras a convertit)
+  //funcion para codificar (da el movimineto de las letras a convertit)
   encode: (totalNumberCypher, textToConvert) => {
-//numero total de movimientos
+    //numero total de movimientos
     let offset = numberMoves(totalNumberCypher);
-//pasa las letras que se ingresan a mayusculas
+    //pasa las letras que se ingresan a mayusculas
     textToConvert = textToConvert.toUpperCase();
     //obtiene el string y lo divide en el espacio
     let arrayOfCharacters = textToConvert.split('');

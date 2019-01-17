@@ -11,9 +11,9 @@ let messageText = 'Mensaje';
 let codeText = 'Codigo';
 
 //dar al boton la funcionalidad de cambiar los textos que indican la funcion que tiene cada caja de texto al momento de hacer el click
-buttonToChange.addEventListener('click', ()=>{
+buttonToChange.addEventListener('click', () => {
   isCoding = !isCoding;
-  if(isCoding){
+  if (isCoding) {
     //set message to original state
     inputLabel.innerHTML = messageText;
     resultLabel.innerHTML = codeText;
@@ -27,10 +27,10 @@ buttonToChange.addEventListener('click', ()=>{
 })
 
 //dar al boton la funcionalidad al momento de hacer el click
-buttonFun.addEventListener('click',()=>{
+buttonFun.addEventListener('click', () => {
   let numberCrypting = document.getElementById("numberCode").value;
   let textToConvert = document.getElementById("yourInput").value;
-  if(isCoding){
+  if (isCoding) {
     //llamar al metododo codificar e imprimirlo
     resultArea.value = window.cipher.encode(numberCrypting, textToConvert);
   } else {
