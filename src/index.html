@@ -18,34 +18,20 @@
   <table>
     <thead>
       <tr>
-        <td id="texto">Mensaje</td>
-        <td><button id="cambiar" onclick="cambiarTextos()">¡Cambiar!</button></button></td>
-        <td id="texto">Código</td>
+        <td><p id="messageText">Mensaje</p></td>
+        <td><button id="buttonToChange" >Cambiar</button></td>
+        <td><p id="codeText">Código</p></td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><textarea id="yourInput" name="yourInput" rows="10" cols="30"></textarea></td>
-        <td>
-          <div class="">
-            <table>
-              <tbody>
-                <tr>
-                  <td><input type="submit" name="Cifrar" value="coder"></td>
-                </tr>
-                <tr>
-                  <td><input type="submit" name="Cifrar" value="decoder"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </td>
-        <td><textarea id="yourResult" name="yourResult" rows="10" cols="30"></textarea></td>
+        <td><input type="submit" name="Cifrar" value="codificar" id="buttonFuntional"></td>
+        <td><textarea id="yourResult" name="yourResult" rows="10" cols="30" readonly="true"></textarea></td>
       </tr>
     </tbody>
   </table>
-  <script src="cipher.js"></script>
-  <script src="index.js"></script>
 </body>
-
+  <script src="index.js"></script>
+  <script src="cipher.js"></script>
 </html>
