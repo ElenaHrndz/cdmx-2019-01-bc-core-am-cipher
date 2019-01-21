@@ -17,12 +17,12 @@ buttonToChange.addEventListener('click', () => {
     //set message to original state
     inputLabel.innerHTML = messageText;
     resultLabel.innerHTML = codeText;
-    buttonFun.value = 'codificar';
+    buttonFun.innerHTML= 'Codificar';
   } else {
     //set message to invert place
     inputLabel.innerHTML = codeText;
     resultLabel.innerHTML = messageText;
-    buttonFun.value = 'decodificar';
+    buttonFun.innerHTML = 'Decodificar';
   }
 })
 

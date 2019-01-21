@@ -1,32 +1,72 @@
+/****************** TAG Selector***********************/
 h1 {
   text-align: center;
   font-family: 'Libre Barcode 128 Text', cursive;
   font-size: 80px;
-  color: #FFFFFF;
+  color: #22AB50;
 }
 
 h2 {
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 20px;
-  color: #7DCD85;
+  font-weight: 800;
+  color: #24A0C9;
 }
 
 p {
   font-family: 'Special Elite', cursive;
+  font-weight: 800;
   color: #778472;
 }
 
 body {
-  background-color: #393D3F;
+  background-color: #0D1C21;
+
 }
 
 table {
   color: #546A7B;
-  border-spacing: 40px;
+  border-spacing: 30px;
+  width: 100%;
 }
 
 tr {
-  font-style: 'Baloo Tamma', cursive;
   text-align: center;
   font-size: 30px;
+}
+
+textarea {
+  font-family:'Special Elite', cursive;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  background-color: #183A45;
+  color: #20D95F;
+  font-weight: bold;
+}
+
+button{
+    background: #24A0C9;
+    border-radius: 20px;
+    font-size: 27px;
+    padding: 10px 23px 7px 20px;
+    text-decoration: none;
+}
+
+button:hover {
+  background: #22AB50;
+  text-decoration: none;
+}
+
+input{
+  font-family: 'Special Elite', cursive;
+  background-color: #1F5769;
+  color: #20D95F;
+}
+
+/******************* ID****************************************/
+#numberCode{
+  height: 50px;
+  width: 100px;
+  font-size: 30px;
+  text-align: center;
 }

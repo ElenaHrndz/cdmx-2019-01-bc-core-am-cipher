@@ -21,7 +21,7 @@ window.cipher = {
       //determina la parte del ascii que se utiliza (los valores del ascci en los que corre) {22 - 38}
       if (codeAscii < 65 || codeAscii > 90 && codeAscii < 97 || codeAscii > 122 && codeAscii < 127) {
         //cambia el valor de los caracteres
-        codeform = arrayOfCharacters[i];
+        code += arrayOfCharacters[i];
       } else {
         //suma el offset a los caracteres usados del ascii, si esto es mayor o igual a maximo numero de letras pasa a la siguiente acciòn
         if (codeAscii + offset >= 65 + maxLetterNumber) {
@@ -35,9 +35,10 @@ window.cipher = {
           // cuando cualquiera de las condiciones anteriores se cumple obtenemos el valor de "codeform"
           codeform = (codeAscii + offset);
         }
+        //se obtiene el valor de la cadena obtenida en codeform
+        code += String.fromCharCode(codeform);
       }
-      //se obtiene el valor de la cadena obtenida en codeform
-      code += String.fromCharCode(codeform);
+
     }
     //regresa el texto codificado
     return code;
@@ -51,18 +52,19 @@ window.cipher = {
     for (let i = 0; i < arrayOfCharacters.length; i++) {
       let codeform;
       if (arrayOfCharacters[i] == ' ') {
-        codeform = arrayOfCharacters[i];
+        code += arrayOfCharacters[i];
       } else {
         let codeAscii = arrayOfCharacters[i].charCodeAt(0);
         if (codeAscii - offset < 65) {
           codeform = (maxLetterNumber + 65) - (65 - (codeAscii - offset));
-        } else if (codeAscii - offset > 65 + maxLetterNumber) {
-          codeform = 65 + ((codeAscii + offset) + (maxLetterNumber + 65));
+        } else if (codeAscii - offset >= 65 + maxLetterNumber) {
+          codeform = 65 + ((codeAscii - offset) - (maxLetterNumber + 65));
         } else {
           codeform = (codeAscii - offset);
         }
+          code += String.fromCharCode(codeform);
       }
-      code += String.fromCharCode(codeform);
+
     }
     return code;
   }
