@@ -13,13 +13,17 @@ describe('cipher', () => {
     it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33',() =>{
       assert.equal(cipher.encode(33,"ABCDEFGHIJKLMNOPQRSTUVWXYZ"),"HIJKLMNOPQRSTUVWXYZABCDEFG" );
    });
+
+   it('debería retornar "hijklmnopqrstuvwxyzabcdefg" para "abcdefghijklmnopqrstuvwxyz" con offset 33',() =>{
+     assert.equal(cipher.encode(33,"abcdefghijklmnopqrstuvwxyz"),"hijklmnopqrstuvwxyzabcdefg" );
+  });
       // Hacker edition
     //
     // Si decides implementar soporte para caracteres no alfabéticos descomenta
     // el test a continuación.
     //
-    // it('debería retornar " !@" para " !@"', () => {
-    //   assert.equal(cipher.encode(33, ' !@'),' !@');
+    // IT('DEBERÍA RETORNAR " !@" PARA " !@"', () => {
+    //   ASSERT.EQUAL(CIPHER.ENCODE(33, ' !@'),' !@');
     // });
 
     //
@@ -28,9 +32,9 @@ describe('cipher', () => {
     // Si decides implementar soporte para caracteres no alfabéticos descomenta
     // el test a continuación.
     //
-    // it('debería retornar " !@" para " !@"', () => {
-    //   assert.equal(cipher.encode(33, ' !@'),' !@');
-    // });
+     it('debería retornar " !@" para " !@"', () => {
+       assert.equal(cipher.encode(33, ' !@'),' !@');
+     });
   });
 
   describe('cipher.decode', () => {
@@ -48,12 +52,12 @@ describe('cipher', () => {
     // Si decides agregar soporte para minúsculas descomenta el test a
     // continuación.
     //
-    // it('debería retornar "abcdefghijklmnopqrstuvwxyz" para "hijklmnopqrstuvwxyzabcdefg" con offset 33', () => {
-    //   assert.equal(
-    //     cipher.decode(33, 'hijklmnopqrstuvwxyzabcdefg'),
-    //     'abcdefghijklmnopqrstuvwxyz'
-    //   );
-    // });
+    it('debería retornar "abcdefghijklmnopqrstuvwxyz" para "hijklmnopqrstuvwxyzabcdefg" con offset 33', () => {
+       assert.equal(
+         cipher.decode(33, 'hijklmnopqrstuvwxyzabcdefg'),
+         'abcdefghijklmnopqrstuvwxyz'
+       );
+     });
 
     //
     // Hacker edition
@@ -61,9 +65,9 @@ describe('cipher', () => {
     // Si decides implementar soporte para caracteres no alfabéticos descomenta
     // el test a continuación.
     //
-    // it('debería retornar " !@" para " !@"', () => {
-    //   assert.equal(cipher.decode(33, ' !@'),' !@');
-    // });
+     it('debería retornar " !@" para " !@"', () => {
+       assert.equal(cipher.decode(33, ' !@'),' !@');
+     });
   });
 
 });
