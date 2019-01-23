@@ -6,26 +6,26 @@ window.cipher = {
   encode: (totalNumberCypher, textToConvert) => {
     //numero total de movimientos
     let offset = numberMoves(totalNumberCypher);
-    //obtiene el string y lo divide en el espacio
+    //convierte el texto ingresado en un arreglo(lo separa por letra)
     let arrayOfCharacters = textToConvert.split('');
-    //declara la variable vacia que debe cubrir ciertas caracteristicas {16 - 41}
+    //declara la variable...
     let code = '';
-    //va a recorrer el string,empezando en cero; determina el valor de cada caracter, lo guarda y pasa con el siguiente
+    //va a recorrer el string, para determinar la posicion que tiene cada letra
     for (let i = 0; i < arrayOfCharacters.length; i++) {
-      //se declara la variable
+      //se declara la variable newCodeAscii
       let newCodeAscii;
-      //le asigna el valor,numero, corespondietne a cada letra
+      //devuelve el valor del carcter en el codigo ascii
       let codeAscii = arrayOfCharacters[i].charCodeAt(0);
-      //determina la parte del ascii que se utiliza (los valores del ascci en los que corre) {22 - 38}
+      //determina la parte del codi ascii que se utiliza (los valores del ascci en los que corre)
       if (codeAscii < 65 || codeAscii > 90 && codeAscii < 97 || codeAscii >122) {
-        //cambia el valor de los caracteres
+        //determina la letra a codificar y...
         code += arrayOfCharacters[i];
       } else {
-        //si es mayuscula
+        //si es mayuscula recorre el codigo ascii a partir de los caracteres corespondientes a las mayusculas (65-91)
         if (codeAscii >= 65 && codeAscii < (65 + maxLetterNumber)){
           newCodeAscii = encodeCapitalsOrLowercase(65, codeAscii, offset);
         }
-        //si es minuscula
+        //si es minuscula recorre el codigo ascii a partir de los caracteres corespondientes a las minusculas(97-123)
         else if(codeAscii >= 97 && codeAscii < (97 + maxLetterNumber)){
           newCodeAscii = encodeCapitalsOrLowercase(97, codeAscii, offset);
         }
@@ -48,11 +48,14 @@ window.cipher = {
       if (codeAscii < 65 || codeAscii > 90 && codeAscii < 97 || codeAscii >122){
         code += arrayOfCharacters[i];
       } else {
+        //si es mayuscula
         if (codeAscii >= 65 && codeAscii < (65 + maxLetterNumber)){
+          // da los parametros para convertir las mayusculas
           newCodeAscii = decodeCapitalsOrLowercase(65, codeAscii, offset);
         }
         //si es minuscula
         else if(codeAscii >= 97 && codeAscii < (97 + maxLetterNumber)){
+          //da los parametros para convertir las minusculas
           newCodeAscii = decodeCapitalsOrLowercase(97, codeAscii, offset);
         }
         code += String.fromCharCode(newCodeAscii);
@@ -65,6 +68,7 @@ window.cipher = {
 
 //esta fuuncion permite saber la cantidad final de movimientos que va a tener el mensaje al momento de  convertirlo
 function numberMoves(numberToConvert) {
+  //convierte el string a numberMoves
   numberToConvert = parseInt(numberToConvert);
   //obtiene el residuo del numero de movimientos asignados por el usuario entre el numero de letras
   numberToConvert %= maxLetterNumber;
@@ -76,20 +80,23 @@ function numberMoves(numberToConvert) {
 //y 97 para minusculas, se pide el codigo del caracter a transformar y el numero de posicines a mover
 function encodeCapitalsOrLowercase(numberOfCaptalOrLowercase, codeAscii, offset){
   let newCodeAscii;
+    //
   if (codeAscii + offset >= numberOfCaptalOrLowercase + maxLetterNumber) {
-    // si lo anterior se cumple entonces "codeform" le suma 65 a la diferencia que resulta de sumar el codigo ascii y el offset menos el numero maximo de letras màs 65
+    //
     newCodeAscii = numberOfCaptalOrLowercase + ((codeAscii + offset) - (maxLetterNumber + numberOfCaptalOrLowercase));
-    // si la suma de ascii y offset es menor a 65 entonces:
+    //
   } else if (codeAscii + offset < numberOfCaptalOrLowercase) {
-    //codeform abtiene el resuktado de la diferencia de el maximo numero de letras màs 65 y (a lasuma del codigo ascii mas la suma del offset le retsa 65)
+    //
     newCodeAscii = (maxLetterNumber + numberOfCaptalOrLowercase) - (numberOfCaptalOrLowercase - (codeAscii + offset));
   } else {
-    // cuando cualquiera de las condiciones anteriores se cumple obtenemos el valor de "codeform"
+    // cuando cualquiera de las condiciones anteriores se cumple obtenemos el valor de "newCodeAscii"
     newCodeAscii = (codeAscii + offset);
   }
   return newCodeAscii;
 }
 
+//Funcion recibe un numero de caracter y lo decodifica en mayuscula o minuscula dependiendo el numberOfCaptalOrLowercase siendo 65 para mayusculas
+//y 97 para minusculas, se pide el codigo del caracter a transformar y el numero de posicines a mover
 function decodeCapitalsOrLowercase(numberOfCaptalOrLowercase, codeAscii, offset){
   let newCodeAscii;
   if (codeAscii - offset < numberOfCaptalOrLowercase){
