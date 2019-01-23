@@ -7,9 +7,9 @@ El programa está pensado para ser una web app, por  lo cual no es necesario hac
 ## Proceso y decisiones de diseño
 
 El diseño está inspirado en é traductor de Google; pretende mantener un diseño minimalista e intuitivo que facilite al usuario su uso.
-La selección de colores está inspirada en la película Matrix, con  la intención de darle un aire enigmático.
-La tipografía del encabezado pretende introducir al usuario en la función de la página, presentando un código de barras en la parte superior.
-La tipografía, en general, busca crear una atmósfera informal, que permita al usuario sentirse identificado.
+  * La selección de colores está inspirada en la película Matrix, con  la intención de darle un aire enigmático.
+  * La tipografía del encabezado pretende introducir al usuario en la función de la página, presentando un código de barras en la parte superior.
+  * La tipografía, en general, busca crear una atmósfera informal, que permita al usuario sentirse identificado.
 
 Siguiendo estas ideas se elaboró una estructura sencilla que presente en una sola ventana el total de la interfaz en la que se debe trabajar.
 
