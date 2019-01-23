@@ -2,7 +2,7 @@
 
 Programa de cifrado que permite codificar mensajes. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
 
-El programa está pensado para ser una web app, por  lo cual no es necesario hacer ningún tipo de instalación previa, ya que se accede a ella a través de una url.
+El programa está pensado para ser una web app, por  lo cual no es necesario hacer ningún tipo de instalación previa, ya que se accede a ella a través de la url de [Encrypt](https://elenahrndz.github.io/cdmx-2019-01-bc-core-am-cipher/src/).
 
 ## Proceso y decisiones de diseño
 
