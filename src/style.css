@@ -4,29 +4,29 @@ h1 {
   font-family: 'Libre Barcode 128 Text', cursive;
   font-size: 80px;
   color: #22AB50;
+  margin: 0;
 }
 
 h2 {
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 20px;
   font-weight: 800;
-  color: #24A0C9;
+  color: white;
 }
 
 p {
   font-family: 'Special Elite', cursive;
-  font-weight: 800;
+  font-weight: 800%;
   color: #778472;
 }
 
 body {
-  background-color: #0D1C21;
-
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKVRX4taTOXsOZY8R4ssPg6y_66bKuxtWAr_9BahUOL3vheE0_zw);
+  background-size: 100%;
 }
 
 table {
-  color: #546A7B;
-  border-spacing: 30px;
+  border-spacing: 20px;
   width: 100%;
 }
 
@@ -36,16 +36,17 @@ tr {
 }
 
 textarea {
+  size: 40%;
   font-family:'Special Elite', cursive;
   line-height: 1.5;
   letter-spacing: 2px;
-  background-color: #183A45;
+  background-color: #6C7059;
   color: #20D95F;
   font-weight: bold;
 }
 
 button{
-    background: #24A0C9;
+    background: #22AB50;
     border-radius: 20px;
     font-size: 27px;
     padding: 10px 23px 7px 20px;
@@ -53,13 +54,13 @@ button{
 }
 
 button:hover {
-  background: #22AB50;
+  background: #4D5645;
   text-decoration: none;
 }
 
 input{
   font-family: 'Special Elite', cursive;
-  background-color: #1F5769;
+  background-color: #6C6960;
   color: #20D95F;
 }
 

@@ -2,7 +2,7 @@
 let maxLetterNumber = 26;
 
 window.cipher = {
-  //funcion para codificar (da el movimineto de las letras a convertit)
+  //funcion para codificar
   encode: (totalNumberCypher, textToConvert) => {
     //numero total de movimientos
     let offset = numberMoves(totalNumberCypher);
@@ -80,16 +80,13 @@ function numberMoves(numberToConvert) {
 //y 97 para minusculas, se pide el codigo del caracter a transformar y el numero de posicines a mover
 function encodeCapitalsOrLowercase(numberOfCaptalOrLowercase, codeAscii, offset){
   let newCodeAscii;
-    //
+    //si la cantidad de movimientos excede el numero maximo de letras se genera un bucle y sigue el movimiento a partir de la primera letra
   if (codeAscii + offset >= numberOfCaptalOrLowercase + maxLetterNumber) {
-    //
     newCodeAscii = numberOfCaptalOrLowercase + ((codeAscii + offset) - (maxLetterNumber + numberOfCaptalOrLowercase));
-    //
+    //si la cantidad de movimientos es menor se genera un bucle que y se sigue contando a partir de la ultima letra y hacia atras
   } else if (codeAscii + offset < numberOfCaptalOrLowercase) {
-    //
     newCodeAscii = (maxLetterNumber + numberOfCaptalOrLowercase) - (numberOfCaptalOrLowercase - (codeAscii + offset));
   } else {
-    // cuando cualquiera de las condiciones anteriores se cumple obtenemos el valor de "newCodeAscii"
     newCodeAscii = (codeAscii + offset);
   }
   return newCodeAscii;
