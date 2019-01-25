@@ -8,26 +8,42 @@ h1 {
 }
 
 h2 {
+  background-color: black;
+  opacity: .8;
   font-family: 'Gloria Hallelujah', cursive;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
   color: white;
 }
 
-p {
+h3{
+  background-color: black;
+  opacity: .8;
   font-family: 'Special Elite', cursive;
-  font-weight: 800%;
-  color: #778472;
+  font-size: 30px;
+  margin: 0;
+  color: #20D95F
+}
+
+p {
+  background-color: black;
+  opacity: .8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
 }
 
 body {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKVRX4taTOXsOZY8R4ssPg6y_66bKuxtWAr_9BahUOL3vheE0_zw);
+  margin: 0;
+  text-align: center;
+  background-image: url(https://i.pinimg.com/564x/8e/ee/04/8eee04aeefee34699b413b5a55079b82.jpg);
   background-size: 100%;
 }
 
 table {
   border-spacing: 20px;
   width: 100%;
+  margin: 0;
 }
 
 tr {
@@ -40,7 +56,7 @@ textarea {
   font-family:'Special Elite', cursive;
   line-height: 1.5;
   letter-spacing: 2px;
-  background-color: #6C7059;
+  background-color: #102C54;
   color: #20D95F;
   font-weight: bold;
 }
@@ -60,14 +76,14 @@ button:hover {
 
 input{
   font-family: 'Special Elite', cursive;
-  background-color: #6C6960;
+  background-color: #102C54;
   color: #20D95F;
 }
 
 /******************* ID****************************************/
 #numberCode{
-  height: 50px;
-  width: 100px;
+  height: 40px;
+  width: 80px;
   font-size: 30px;
   text-align: center;
 }

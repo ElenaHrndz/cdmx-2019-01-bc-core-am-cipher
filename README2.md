@@ -15,7 +15,7 @@ Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
 En la actualidad, todos los cifrados de sustitución simple se descifran con mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas más complejos de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el sistema ROT13.
 
-##Pre-requisitos
+## Pre-requisitos
 
 1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
    condiciones, algo como [Atom](https://atom.io/),
@@ -55,7 +55,7 @@ En la actualidad, todos los cifrados de sustitución simple se descifran con muc
     o `cipher.decode()` según se necesita.
   * `test/cipher.spec.js`: este archivo contiene algunos tests de ejemplo y que podras implementar los tests(pruebas ) para `cipher.encode()` y `cipher.decode()`.
 
-####TESTS
+#### TESTS
 
  El _boilerplate_ ya contiene el
 setup y configuración necesaria para ejecutar los tests (pruebas) así como _code
@@ -136,6 +136,6 @@ El producto está enfocado a un público joven,mayormente adolescentes. La final
 
 Hoy en día es común que los padres revisen los celulares de los hijos, cosa que para los adolescentes puede llegar a ser incómodo. AL mismo tiempo, se dan ocasiones en las que los profesores recogen los celulares o hacen a los alumnos leer los mensajes cuando se dan cuenta de que alguno lo està utilizando.
 
-Debido a este tipo de situaciones que que surge Encrypt, pues pretende dar a los jóvenes la libertad de la que en ocasiones no pueden gozar. Al encriptar los mensajes permite al usuario que solo la persona que él desea entenderlos.
+Debido a este tipo de situaciones que que surge Encrypt, pues pretende dar a los jóvenes la libertad de la que en ocasiones no pueden gozar. Al encriptar los mensajes permite al usuario que solo la persona que él desea pueda entenderlos.
 
 Su principal intención es dar al usuario confidencialidad. Permite que pueda mandar mensajes sin que los padres o maestros se enteren del contenido de los mismos.
